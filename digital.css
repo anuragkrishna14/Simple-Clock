@@ -1,0 +1,47 @@
+
+.digital_clock{
+    position: relative;
+    top: 1.5rem;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    /* border: 15px solid skyblue; */
+    border: 15px solid #4db5ff;
+    border-radius: 50px;
+    padding: 4rem;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.digital_clock > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+}
+
+.digital_clock > div > .time{
+    height: 7rem;
+    background-color: #36454f78;
+    border-radius: 3px 3px 0 0;
+    font-size: 4rem;
+    font-weight: 400;
+}
+.digital_clock > div > .hand{
+    height: 3rem;
+    background-color: #0c243c88;
+    border-radius: 0 0 3px 3px;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.digital_clock > div.am-pm > div.time{
+    background-color: transparent;
+}
+.digital_clock > div.am-pm > div.hand{
+    position: relative;
+    top: -50%;
+    transform: translatey(50%);
+    font-size: 2rem;
+    font-weight: 400;
+}
