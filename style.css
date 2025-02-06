@@ -76,3 +76,175 @@ nav > div.active{
     justify-content: center;
     align-items: center;
 }
+
+
+/*************************Analog*****************************/
+.analog_clock{
+    width: 36rem;
+    height: 36rem;
+    /* outline: 15px solid skyblue; */
+    outline: 15px solid #4db5ff;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    position: relative;
+    top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0.9;
+}
+
+.numbers{
+    position: relative;
+    scale: 0.88;
+}
+
+.number{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.hr1{
+    top: calc(-1 * var(--d2));
+    left: var(--d1);
+}
+.hr2{
+    top: calc(-1 * var(--d1));
+    left: calc(var(--d2));
+}
+.hr3{
+    left: 18rem;
+}
+.hr4{
+    top: var(--d1);
+    left: var(--d2);
+}
+.hr5{
+    top: var(--d2);
+    left: var(--d1);
+}
+.hr6{
+    top: 18rem;
+}
+.hr7{
+    top: var(--d2);
+    left: calc(-1 * var(--d1));
+}
+.hr8{
+    top: var(--d1);
+    left: calc(-1 * var(--d2));
+}
+.hr9{
+    left: -18rem;
+}
+.hr10{
+    top: calc(-1 * var(--d1));
+    left: calc(-1 * var(--d2));
+}
+.hr11{
+    top: calc(-1 * var(--d2));
+    left: calc(-1 * var(--d1));
+}
+.hr12{
+    top: -18rem;
+}
+
+.hands{
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    rotate: -90deg;
+    z-index: 10;
+}
+.hands .hand{
+    border-radius: 50% 50% 50% 50% / 0% 100% 100% 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    rotate: 0deg;
+    transform-origin: 0 0 0;
+
+}
+.hands .hour{
+    width: 8.5rem;
+    height: 18px;
+    background-color: mediumblue;
+}
+.hands .minute{
+    width: 12rem;
+    height: 10px;
+    background-color: coral;
+}
+.hands .second{
+    width: 15rem;
+    height: 2px;
+    background-color: red;
+}
+.hands .center{
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+
+/**********************Digital**************************/
+.digital_clock{
+    position: relative;
+    top: 1.5rem;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    /* border: 15px solid skyblue; */
+    border: 15px solid #4db5ff;
+    border-radius: 50px;
+    padding: 4rem;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.digital_clock > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+}
+
+.digital_clock > div > .time{
+    height: 7rem;
+    background-color: #36454f78;
+    border-radius: 3px 3px 0 0;
+    font-size: 4rem;
+    font-weight: 400;
+}
+.digital_clock > div > .hand{
+    height: 3rem;
+    background-color: #0c243c88;
+    border-radius: 0 0 3px 3px;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.digital_clock > div.am-pm > div.time{
+    background-color: transparent;
+}
+.digital_clock > div.am-pm > div.hand{
+    position: relative;
+    top: -50%;
+    transform: translatey(50%);
+    font-size: 2rem;
+    font-weight: 400;
+}
